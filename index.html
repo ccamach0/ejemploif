@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Explicación del If en JavaScript</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				margin: 20px;
+				padding: 20px;
+				background-color: #f0f0f0;
+			}
+			h1 {
+				color: #333;
+			}
+			.container {
+				background-color: #fff;
+				padding: 20px;
+				border-radius: 8px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			}
+			.result {
+				margin-top: 20px;
+				padding: 10px;
+				border-radius: 4px;
+				background-color: #e0e0e0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Explicación del If en JavaScript</h1>
+			<p>La estructura de control <code>if</code> se utiliza para ejecutar un bloque de código solo si se cumple una condición específica. Aquí tienes un ejemplo interactivo:</p>
+			
+			<form id="ifForm">
+				<label for="numberInput">Ingresa un número:</label>
+				<input type="number" id="numberInput" name="numberInput" required>
+				<button type="submit">Verificar</button>
+			</form>
+			
+			<div id="result" class="result"></div>
+		</div>
+		
+		<script>
+			document.getElementById('ifForm').addEventListener('submit', function(event) {
+				event.preventDefault();
+				var number = document.getElementById('numberInput').value;
+				var resultDiv = document.getElementById('result');
+				var message;
+				
+				if (number > 0) {
+					message = "El número es positivo.";
+				} else if (number < 0) {
+					message = "El número es negativo.";
+				} else {
+					message = "El número es cero.";
+				}
+				
+				resultDiv.textContent = message;
+			});
+		</script>
+		
+	</body>
+</html>
